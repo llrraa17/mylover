@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+      html, body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+      }
+
+      body {
+        display: flex;
+        background-color: #a015e088;
+        font-family: sans-serif;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .login {
+        display: table;
+        background-color: #1284fc;
+        border-radius: 10px;
+        box-sizing: border-box;
+        padding: 10px;
+        filter: drop-shadow(0 0 10px #0d06db);
+      }
+
+      .login h2 {
+        margin: 0;
+        margin-bottom: 10px;
+        text-align: center;
+        color: white;
+      }
+
+      .login form input {
+        display: block;
+        margin-bottom: 10px;
+      }
+
+      .login form input:not([type="submit"]) {
+        width: 300px;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #ddd;
+      }
+
+      .login form input[type="submit"] {
+        background-color: #4CAF50;
+        color: white;
+        width: 320px;
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+      }
+
+      .login form input[type="submit"]:hover {
+        background-color: #45a049;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="login">
+      <h2 class="heading">Enter Code</h2>
+      <form id="loginForm">
+        <input id="codeInput" type="text" placeholder="Enter code" required>
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+
+    <script>
+      // Form submit event listener
+      document.getElementById('loginForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the form from submitting the normal way
+
+        const code = document.getElementById('codeInput').value;
+
+        if (code === "lina&ranim") {
+          // Redirect to the love poem page
+          window.location.href = "love_poem.html";  // Redirect after code validation
+        } else {
+          alert("Invalid code! Please try again.");
+        }
+      });
+    </script>
+  </body>
+</html>

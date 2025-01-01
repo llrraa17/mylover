@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Romantic Message</title>
+    <style>
+      body {
+        font-family: 'Arial', sans-serif;
+        background-color: red;
+        color: #af3c3c;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100vh;
+        text-align: center;
+      }
+
+      .container {
+        background-color: black;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: white;
+        width: 80%;
+        max-width: 600px;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+        color: white;
+      }
+
+      p {
+        font-size: 1.5rem;
+        margin-top: 20px;
+        color:red;
+      }
+
+      img {
+        width: 100%; /* Make the image responsive */
+        max-width: 400px; /* Limit the width of the image */
+        margin-top: 20px;
+        border-radius: 10px;
+      }
+
+      audio {
+        width: 100%;
+        margin-top: 20px;
+      }
+      button {
+        font-size: 1.2rem;
+        padding: 15px 30px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 200px; /* Set a fixed width for buttons */
+        background-color: red;
+        color: white;
+        transition: background-color 0.3s ease;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="container">
+      <h1>You should always love me <br> Today, Tomorrow, and Forever 
+      <em> LINA </em></h1>
+
+      <p> I LOVE U </p>
+
+      
+      <img src="https://i.pinimg.com/originals/76/a6/86/76a68671fff570eafb65dbe08f21e85a.gif">
+
+      
+      <audio controls autoplay>
+        <source src="Mitski - My Love Mine All Mine copy 2.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+      </audio>
+      <button id="too"> I LOVE U TOO</button>
+    </div>
+    <script>
+ document.getElementById("too").addEventListener("click", goToMusicPage);
+
+function goToMusicPage() {
+  window.location.href = 'too.html';
+      }
+
+    </script>
+
+  </body>
+</html>

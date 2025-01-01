@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love</title>
+    <style>
+      body {
+        font-family: 'Arial', sans-serif;
+        background-color: #2c28e6cd;
+        color: #333;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        text-align: center;
+      }
+
+      .poem-container {
+        background-color: #d787e3;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 0 15px rgba(4, 73, 157, 0.1);
+        color: white;
+        width: 80%; /* Ensure the content fits within the screen */
+        max-width: 600px; /* Set a max width */
+        overflow: hidden; /* Prevent overflow of content */
+      }
+
+      h1 {
+        font-size: 2.5rem;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+      }
+
+      .poem-title {
+        font-size: 3rem;
+        margin-bottom: 20px;
+        color: #1100ff;
+      }
+
+      img {
+        width: 100%; /* Make the image responsive */
+        max-width: 500px; /* Limit the width of the image */
+        border-radius: 10px;
+        margin-bottom: 20px; /* Add space between the image and buttons */
+      }
+
+      /* Button styling */
+      .button-container {
+        display: flex;
+        justify-content: center; /* Align buttons horizontally */
+        gap: 20px; /* Add space between buttons */
+        margin-top: 20px;
+      }
+
+      button {
+        font-size: 1.2rem;
+        padding: 15px 30px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 200px; /* Set a fixed width for buttons */
+        background-color: #4CAF50;
+        color: white;
+        transition: background-color 0.3s ease;
+      }
+
+      button:hover {
+        background-color: #45a049;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="poem-container">
+      <h1 class="poem-title">For US </h1>
+      <h2>Will you forgive me and love only me ?</h2>
+      <img src="https://i.pinimg.com/736x/9c/01/81/9c01816828712e68ba36b99019b87f3a.jpg">
+      
+      <!-- Button container for horizontal alignment -->
+      <div class="button-container">
+        <button id="yes">Yes</button>
+        <button id="no">No</button>
+      </div>
+    </div>
+
+    <script>
+       document.getElementById("yes").addEventListener("click", goToMusicPage);
+
+function goToMusicPage() {
+  // Redirect to romantic-message.html page
+  window.location.href = 'YES.html';
+      }
+
+      // Fixing event listener for the "no" button
+      var no = document.getElementById("no");
+      no.addEventListener("click", change);
+
+      function change() {
+        var maxWidth = window.innerWidth - no.offsetWidth; // Maximum x-position within the window
+        var maxHeight = window.innerHeight - no.offsetHeight; // Maximum y-position within the window
+
+        // Generate random positions for the "No" button
+        var i = Math.floor(Math.random() * maxWidth);
+        var j = Math.floor(Math.random() * maxHeight);
+
+        // Change the position of the "No" button
+        no.style.position = 'absolute'; // Make the button's position absolute to allow free movement
+        no.style.left = i + "px";
+        no.style.top = j + "px";
+      }
+    </script>
+
+  </body>
+</html>
